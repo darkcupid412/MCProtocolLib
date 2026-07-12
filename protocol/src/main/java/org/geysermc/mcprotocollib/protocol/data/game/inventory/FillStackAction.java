@@ -1,7 +1,14 @@
 package org.geysermc.mcprotocollib.protocol.data.game.inventory;
 
 public enum FillStackAction implements ContainerAction {
-    FILL;
+    /**
+     * Fills the carried stack, checking the container's slots in order.
+     */
+    FILL,
+    /**
+     * Fills the carried stack, checking the container's slots in reverse order.
+     */
+    FILL_REVERSED;
 
     public int getId() {
         return this.ordinal();
